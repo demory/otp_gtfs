@@ -1,0 +1,22 @@
+Files used to create http://opentripplanner.com/misc/gtfs/
+
+To recreate (all steps should be run from top-level directory, i.e. same as where this README is located):
+
+- Dump copy of GTFS Data Exchange json feed (http://www.gtfs-data-exchange.com/api/agencies) into local file called exchange.json
+
+- Create "data" directory to contain extracted feeds
+
+- run GTFS download script:
+    python python/download_gtfs.py
+
+- run GTFS extraction script:
+    python python/extract_gtfs.py
+        
+- run GTFS processing script to generate polygons and populate calendar status field:
+    python python/process_gtfs.py
+    
+- run JSON export script to write all data to single file (all.json):
+    python python/process_gtfs.py
+    
+- deploy contents of webapp to desired location, along with all.json    
+    

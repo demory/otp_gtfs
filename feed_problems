@@ -1,0 +1,9 @@
+acad - files not in top-level directory. fixed manually.
+amtrak - files not in top-level directory. fixed manually.
+calgary-transit - bad tranfers.txt file, rest of feed ok. skipped transfers.txt only.
+patco - stop 246 (Ferry Ave) missing longitude. researched/fixed manually.
+port-authority-trans-hudson - files not in top-level directory. fixed manually.
+rvtd - stop_times contains multiple references to stop 220160 which is not defined in stops.txt. gtfs feed skipped.
+suburban - files not in top-level directory. fixed manually.
+yuba-sutter-transit - errant newline in definition of stop 12159. fixed manually.
+

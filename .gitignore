@@ -1,0 +1,7 @@
+all.json
+exchange.json
+data
+java/.metadata
+backup
+java/gtfsmetrics/.*
+java/gtfsmetrics/target

@@ -1,0 +1,40 @@
+body {
+    font-family: sans-serif;
+}
+
+#list {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 295px;
+    padding-left: 5px;
+    font-size: 11px;
+    overflow: auto;
+}
+
+#map {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 300px;
+    bottom: 0px;
+}
+
+.feedstatus {
+    float: left;
+    background: gray;
+    width: 16px;
+    height: 9px;
+    margin-top: 2px;
+}
+
+.feedlink {
+    margin-left: 20px;
+}
+
+.feedlink:hover {
+    text-decoration:underline;
+    cursor: pointer;
+}
+
