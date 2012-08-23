@@ -68,7 +68,8 @@ public class CalendarStatus {
             DateTime start = new DateTime(svcCal.getStartDate().getAsDate().getTime());
             DateTime end = new DateTime(svcCal.getEndDate().getAsDate().getTime());
             
-            for(int d=0; d < Days.daysBetween(start, end).getDays(); d++) {
+            int days = Days.daysBetween(start, end).getDays();
+            for(int d=0; d < days; d++) {
                 int gd = getDay(svcCal, end.dayOfWeek().get());// dateCal.get(Calendar.DAY_OF_WEEK));
                 boolean removeException = false;
                 Set<String> dateSet = removeExceptions.get(svcCal.getServiceId());
