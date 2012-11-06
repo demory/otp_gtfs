@@ -22,8 +22,11 @@ import org.onebusaway.gtfs.serialization.GtfsReader;
 public class CalendarStatus {
     public static void main( String[] args ) {
         GtfsReader reader = new GtfsReader();
+        String filename = args[args.length - 1];
+        boolean returnDate = (args.length > 1 && args[0].equals("-d"));
+        
         try {
-            reader.setInputLocation(new File(args[0]));
+            reader.setInputLocation(new File(filename));
         } catch (IOException e1) {
             // TODO Auto-generated catch block
             e1.printStackTrace();
@@ -90,6 +93,10 @@ public class CalendarStatus {
             }
         }
         
+        if(returnDate) {
+            System.out.print(latestEnd);
+            return;
+        }
         System.out.print(Days.daysBetween(new DateTime(), latestEnd).getDays());
         
     }
